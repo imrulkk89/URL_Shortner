@@ -5,6 +5,7 @@ import { UrlShortnerModule } from './url-shortner/url-shortner.module';
 import { RedirectionModule } from './redirection/redirection.module';
 import { AnalyticsModule } from './analytics/analytics.module';
 import { CustomShortnerModule } from './custom-shortner/custom-shortner.module';
+import { AuthModule } from './auth/auth.module';
 
 
 @Module({
@@ -16,7 +17,8 @@ import { CustomShortnerModule } from './custom-shortner/custom-shortner.module';
   AnalyticsModule,
   UrlShortnerModule,
   RedirectionModule,
-  CustomShortnerModule],
+  CustomShortnerModule,
+  AuthModule],
   controllers: [],
   providers: [],
 })
