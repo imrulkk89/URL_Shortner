@@ -12,12 +12,7 @@ export class UrlShortnerService {
         private urlMappingModel: mongoose.Model<UrlMapping>,       
         private  helper: HelperService
     ){}
-
-    async findAll(): Promise<UrlMapping[]> {
-      const urls = await this.urlMappingModel.find();
-      return urls;                                                                    
-    }
-
+    
     async shortenUrl(url: string): Promise<string> {  
 
         const isExist: UrlMapping = await this.urlMappingModel.findOne({longUrl: url});

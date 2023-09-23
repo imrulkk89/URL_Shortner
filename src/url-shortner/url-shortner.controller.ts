@@ -6,12 +6,7 @@ import { UrlMapping } from './schemas/url-mapping.schema';
 @Controller('url-shortner')
 export class UrlShortnerController {
     constructor(private urlShortnerService: UrlShortnerService){}
-
-    @Get()
-    async getAllUrls(): Promise<UrlMapping[]> {
-        return await this.urlShortnerService.findAll();
-    }
-
+   
     @Post()
     async createShortUrl(@Body() {url: longUrl}, @Res() response: Response):Promise<Response> {        
         const shortUrl: string = await this.urlShortnerService.shortenUrl(longUrl)
