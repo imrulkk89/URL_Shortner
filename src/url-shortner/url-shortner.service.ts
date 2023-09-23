@@ -15,6 +15,8 @@ export class UrlShortnerService {
     
     async shortenUrl(url: string): Promise<string> {  
 
+        url = this.helper.checknFixUrl(url);
+
         const isExist: UrlMapping = await this.urlMappingModel.findOne({longUrl: url});
 
         const domainName = process.env.DOMAIN_NAME;
@@ -28,7 +30,7 @@ export class UrlShortnerService {
       
           // Save the mapping in the database
         const urlMapping = new this.urlMappingModel({
-            "longUrl": this.helper.checknFixUrl(url),
+            "longUrl": url,
             "shortUrl": shortId
         });
       

@@ -1,0 +1,340 @@
+{
+	"info": {
+		"_postman_id": "df22e27b-9d27-417b-bce9-d41388c4c59c",
+		"name": "URL Shortner",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "766656"
+	},
+	"item": [
+		{
+			"name": "SignUp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Imrul Kais Khan\",\n    \"email\": \"my@mail.com\",\n    \"password\": \"abc321!\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/signpu",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"signpu"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"my@mail.com\",\n    \"password\": \"abc321!\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Output",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"my@mail.com\",\n    \"password\": \"abc321!\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "183"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"b7-dYi5XDBkqnmjYPfRCW1gzNb8YhA\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 23 Sep 2023 13:56:29 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MGVlODYyZTJhYTFiNzliZDhkYjVhMyIsImlhdCI6MTY5NTQ3NzM4OSwiZXhwIjoxNjk1NDc3Mzg5fQ.12SatknzS61SbM7zmW5VfxAWpj1pa7sbgGa_vNd58Co\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Shortening URL",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MGVlODYyZTJhYTFiNzliZDhkYjVhMyIsImlhdCI6MTY5NTQ3OTE0NywiZXhwIjoxNjk1NTY1NTQ3fQ.T5ugHur9VUsWBNpvcs37e_C8aapChJW9hb2pd4EASV0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"url\": \"https://www.udemy.com/\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/url-shortner",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"url-shortner"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Output",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MGVlODYyZTJhYTFiNzliZDhkYjVhMyIsImlhdCI6MTY5NTQ3OTE0NywiZXhwIjoxNjk1NTY1NTQ3fQ.T5ugHur9VUsWBNpvcs37e_C8aapChJW9hb2pd4EASV0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"url\": \"translate.google.com/\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/url-shortner",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"url-shortner"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "35"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"23-AnDZqGq/YyL5Dm4bDdr8h2wP5Mg\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 23 Sep 2023 14:26:07 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"shortUrl\": \"localhost:3000/H5uRE\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Custom Shortening",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MGVlODYyZTJhYTFiNzliZDhkYjVhMyIsImlhdCI6MTY5NTQ3OTE0NywiZXhwIjoxNjk1NTY1NTQ3fQ.T5ugHur9VUsWBNpvcs37e_C8aapChJW9hb2pd4EASV0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"longUrl\": \"https://bikroy.com/\",\n    \"shortId\": \"my-short-id\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/custom-shortner",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"custom-shortner"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Analytics",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "Output",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MGVlODYyZTJhYTFiNzliZDhkYjVhMyIsImlhdCI6MTY5NTQ3OTE0NywiZXhwIjoxNjk1NTY1NTQ3fQ.T5ugHur9VUsWBNpvcs37e_C8aapChJW9hb2pd4EASV0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/analytics",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"analytics"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "997"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3e5-rlUwGTcfnIkhPYqre5dcr2CG76s\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 23 Sep 2023 14:35:35 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"accessCount\": 0,\n        \"longUrl\": \"https://www.youtube.com\",\n        \"shortUrl\": \"V8ADi\",\n        \"accessTime\": []\n    },\n    {\n        \"accessCount\": 0,\n        \"longUrl\": \"https://www.google.com\",\n        \"shortUrl\": \"MEmbi\",\n        \"accessTime\": []\n    },\n    {\n        \"accessCount\": 0,\n        \"longUrl\": \"http://www.linkedin.com\",\n        \"shortUrl\": \"cmW0c\",\n        \"accessTime\": []\n    },\n    {\n        \"accessCount\": 0,\n        \"longUrl\": \"https://www.facebook.com\",\n        \"shortUrl\": \"FcBMu\",\n        \"accessTime\": [\n            \"2023-09-23T06:01:17.885Z\",\n            \"2023-09-23T06:02:45.417Z\"\n        ]\n    },\n    {\n        \"accessCount\": 0,\n        \"longUrl\": \"http://stackoverflow.com\",\n        \"shortUrl\": \"nvOzr\",\n        \"accessTime\": [\n            \"2023-09-23T06:12:59.408Z\"\n        ]\n    },\n    {\n        \"accessCount\": 1,\n        \"longUrl\": \"http://www.instagram.com\",\n        \"shortUrl\": \"WXLGb\",\n        \"accessTime\": [\n            \"2023-09-23T06:22:52.707Z\",\n            \"2023-09-23T06:34:44.202Z\"\n        ]\n    },\n    {\n        \"accessCount\": 1,\n        \"longUrl\": \"http://translate.google.com\",\n        \"shortUrl\": \"gio0B\",\n        \"accessTime\": [\n            \"2023-09-23T06:37:28.478Z\"\n        ]\n    },\n    {\n        \"accessCount\": 1,\n        \"longUrl\": \"https://bikroy.com\",\n        \"shortUrl\": \"my-short-id\",\n        \"accessTime\": [\n            \"2023-09-23T11:51:31.300Z\"\n        ]\n    },\n    {\n        \"accessCount\": 0,\n        \"longUrl\": \"http://translate.google.com\",\n        \"shortUrl\": \"H5uRE\",\n        \"accessTime\": []\n    }\n]"
+				}
+			]
+		}
+	]
+}

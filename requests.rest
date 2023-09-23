@@ -8,6 +8,7 @@
 
 POST {{host}}/url-shortner HTTP/1.1
 Content-Type: {{contentType}}
+Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MGVlODYyZTJhYTFiNzliZDhkYjVhMyIsImlhdCI6MTY5NTQ3Njg4MSwiZXhwIjoxNjk1NDc2ODgxfQ.8w7v6-vdJ2Nj7y7YVECsoyCRSy1DM3hfbBlfZKuFPBU"
 
 {
     "url": "translate.google.com/"
