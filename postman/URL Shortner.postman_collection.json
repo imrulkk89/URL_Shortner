@@ -21,7 +21,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/auth/signpu",
+					"raw": "http://localhost:3000/auth/signup",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -29,7 +29,7 @@
 					"port": "3000",
 					"path": [
 						"auth",
-						"signpu"
+						"signup"
 					]
 				}
 			},
@@ -272,7 +272,24 @@
 			"name": "Get Analytics",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MGVlODYyZTJhYTFiNzliZDhkYjVhMyIsImlhdCI6MTY5NTQ3OTE0NywiZXhwIjoxNjk1NTY1NTQ3fQ.T5ugHur9VUsWBNpvcs37e_C8aapChJW9hb2pd4EASV0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/analytics",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"analytics"
+					]
+				}
 			},
 			"response": [
 				{
