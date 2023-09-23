@@ -3,6 +3,7 @@ import { ConfigModule } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
 import { UrlShortnerModule } from './url-shortner/url-shortner.module';
 import { RedirectionModule } from './redirection/redirection.module';
+import { AnalyticsModule } from './analytics/analytics.module';
 
 
 @Module({
@@ -11,6 +12,7 @@ import { RedirectionModule } from './redirection/redirection.module';
     isGlobal: true
   }),
   MongooseModule.forRoot(process.env.DB_URI),
+  AnalyticsModule,
   UrlShortnerModule,
   RedirectionModule],
   controllers: [],
