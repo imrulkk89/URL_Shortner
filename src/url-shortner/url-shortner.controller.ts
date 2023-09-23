@@ -1,7 +1,7 @@
 import { Body, Controller, Get, Post, Res } from '@nestjs/common';
 import { Response } from 'express';
 import { UrlShortnerService } from './url-shortner.service';
-import { UrlMapping } from './schemas/url-mapping.schema';
+
 
 @Controller('url-shortner')
 export class UrlShortnerController {

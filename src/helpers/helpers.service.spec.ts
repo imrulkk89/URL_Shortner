@@ -1,15 +1,15 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { ShortidGeneratorService } from './helpers.service';
+import { HelperService } from './helpers.service';
 
 describe('ShortidGeneratorService', () => {
-  let service: ShortidGeneratorService;
+  let service: HelperService;
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
-      providers: [ShortidGeneratorService],
+      providers: [HelperService],
     }).compile();
 
-    service = module.get<ShortidGeneratorService>(ShortidGeneratorService);
+    service = module.get<HelperService>(HelperService);
   });
 
   it('should be defined', () => {
