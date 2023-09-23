@@ -4,6 +4,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { UrlShortnerModule } from './url-shortner/url-shortner.module';
 import { RedirectionModule } from './redirection/redirection.module';
 import { AnalyticsModule } from './analytics/analytics.module';
+import { CustomShortnerModule } from './custom-shortner/custom-shortner.module';
 
 
 @Module({
@@ -14,7 +15,8 @@ import { AnalyticsModule } from './analytics/analytics.module';
   MongooseModule.forRoot(process.env.DB_URI),
   AnalyticsModule,
   UrlShortnerModule,
-  RedirectionModule],
+  RedirectionModule,
+  CustomShortnerModule],
   controllers: [],
   providers: [],
 })

@@ -3,3 +3,8 @@ export interface IAnalytics {
     accessTime: Date[];
     accessCount: number;
 }
+
+export interface ICustomShortnerBody {
+    longUrl: string;
+    shortId: string;
+}
